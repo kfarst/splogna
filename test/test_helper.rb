@@ -13,7 +13,7 @@ class ActiveSupport::TestCase
 end
 
 class ActionMailer::TestCase
-  include ActionController::UrlWriter
+  include Rails.application.routes.url_helpers
   default_url_options[:host] = "http://example.com"
 end
 
